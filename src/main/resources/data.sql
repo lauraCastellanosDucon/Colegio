@@ -64,20 +64,74 @@ alter table asignatura_estudiante add foreign key (id_estudiante) references est
 -------------------  Creación de las insersiones a las tablas
 
 -- inserción del colegio
-insert into colegio (id,nombre) values (1, 'colegio atlantis');
+insert into colegio (id,nombre) values (1, 'El colegio del Olimpo');
 
 -- inserciones para la tabla curso
-insert into curso (id, grado, salon,id_colegio) values (1, 8,'A',1),(2, 8,'B',1),(3, 8,'C',1),(4, 8,'D',1);
+insert into curso (id, grado, salon,id_colegio) values (1, 10,'A',1),(2, 10,'B',1),(3, 11,'A',1),(4, 11,'B',1);
 
 -- inserciones para la tabla profesor
-insert into profesor (id,nombre) values (10,'juan'),(11,'luisa'),(12,'pedro'),(13,'maria'),(14,'jose');
+insert into profesor (id,nombre) values (10,'Némesis'),(11,'Príapo'),(12,'Iris');
 
 -- inserciones para la tabla asignatura
-insert into asignatura (id, nombre, id_curso,id_profesor) values (101,'Física',1,10),(102,'Química',2,11),(103,'Matemáticas',3,12),(104,'Español',4,13),(105,'Historia',2,14);
+insert into asignatura (id, nombre, id_curso,id_profesor) values
+(101,'Matemáticas',1,10),
+(102,'Matemáticas',2,10),
+(103,'Matemáticas',3,10),
+(104,'Matemáticas',4,10),
+(105,'Español',1,11),
+(106,'Español',2,11),
+(107,'Ingles básico',1,12),
+(108,'Ingles avanzado',2,12),
+(109,'Pre Icfes',3,10),
+(110,'Pre Icfes',4,10);
 
 -- inserciones para la tabla estudiante
-insert into estudiante (id, nombre) values (1000, 'alexander'),(1001, 'brenda'),(1002, 'camilo'), (1003, 'diana'),(1004, 'esteban'), (1005, 'francy');
+insert into estudiante (id, nombre) values
+(1000, 'Afrodita'),
+(1001, 'Apolo'),
+(1002, 'Ares'),
+(1003, 'Artemisa'),
+(1004, 'Atenea'),
+(1005, 'Dionisio'),
+(1006, 'Hefesto'),
+(1007, 'Hera'),
+(1008, 'Hermes'),
+(1009, 'Hades'),
+(1010, 'Poseidón'),
+(1011, 'Zeus');
 
 -- inserciones para la tabla asignatura_estudiante
-insert into asignatura_estudiante (id_asignatura, id_estudiante) values (101,1000),(102,1001),(103,1002),(103,1005),(104,1003),(105,1002),(105,1005),(101,1004);
+insert into asignatura_estudiante (id_asignatura, id_estudiante) values
+(101,1000),
+(105,1000),
+(107,1000),
+(101,1001),
+(105,1001),
+(107,1001),
+(101,1002),
+(105,1002),
+(107,1002),
 
+(102,1003),
+(106,1003),
+(108,1003),
+(102,1004),
+(106,1004),
+(108,1004),
+(102,1005),
+(106,1005),
+(108,1005),
+
+(103,1006),
+(109,1006),
+(103,1007),
+(109,1007),
+
+(104,1008),
+(110,1008),
+(104,1009),
+(110,1009),
+(104,1010),
+(110,1010),
+(104,1011),
+(110,1011);
